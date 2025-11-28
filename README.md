@@ -52,42 +52,42 @@ The addition of an integral term to the controller ( ) tends to help reduce stea
 	Determine the steady state error and analyse the controllers.
 ## Program: 
 ### Without Controller (Open loop System)
-num=[1];
-den=[1 10 20];
-sys=tf(num,den);
-subplot(2,2,1);
-step(sys);
-title('open loopo system');
+num=[1]; <br>
+den=[1 10 20]; <br>
+sys=tf(num,den); <br>
+subplot(2,2,1); <br>
+step(sys); <br>
+title('open loopo system'); <br>
 
 
 
 ### With P-Controller
-kp=300;
-c1=pid(kp);
-g1=feedback(c1*sys,1);
-subplot(2,2,2);
-step(g1);
-title('p-controller');
+kp=300; <br>
+c1=pid(kp); <br>
+g1=feedback(c1*sys,1); <br>
+subplot(2,2,2); <br>
+step(g1); <br>
+title('p-controller'); <br>
 
 ### With PI Controller
-kp=30;
-ki=70;
-c2=pid(kp,ki)
-g2=feedback(c2*sys,1)
-subplot(2,2,3)
-step(g2)
-title('pi-controller')
+kp=30; <br>
+ki=70; <br>
+c2=pid(kp,ki) <br>
+g2=feedback(c2*sys,1) <br>
+subplot(2,2,3) <br>
+step(g2) <br>
+title('pi-controller') <br>
 
 
 ### With PID Controller
-kp=350;
-ki=300;
-kd=50;
-c3=pid(kp,ki,kd);
-g3=feedback(c3*sys,1);
-subplot(2,2,4);
-step(g3);
-title('pid controller');
+kp=350; <br>
+ki=300; <br>
+kd=50; <br>
+c3=pid(kp,ki,kd); <br>
+g3=feedback(c3*sys,1); <br>
+subplot(2,2,4); <br>
+step(g3); <br>
+title('pid controller'); <br>
 
 ## Output: <img width="1729" height="874" alt="Screenshot 2025-11-01 143138" src="https://github.com/user-attachments/assets/0bc6dd40-de2d-47d6-8e49-b52de5554fe4" />
 
