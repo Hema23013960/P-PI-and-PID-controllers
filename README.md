@@ -55,19 +55,19 @@ The addition of an integral term to the controller ( ) tends to help reduce stea
 num=[1];
 den=[1 10 20];
 sys=tf(num,den);
-subplot(2,2,1)
-step(sys)
-title('open loopo system')
+subplot(2,2,1);
+step(sys);
+title('open loopo system');
 
 
 
 ### With P-Controller
 kp=300;
-c1=pid(kp)
-g1=feedback(c1*sys,1)
-subplot(2,2,2)
-step(g1)
-title('p-controller')
+c1=pid(kp);
+g1=feedback(c1*sys,1);
+subplot(2,2,2);
+step(g1);
+title('p-controller');
 
 ### With PI Controller
 kp=30;
@@ -83,11 +83,11 @@ title('pi-controller')
 kp=350;
 ki=300;
 kd=50;
-c3=pid(kp,ki,kd)
-g3=feedback(c3*sys,1)
-subplot(2,2,4)
-step(g3)
-title('pid controller')
+c3=pid(kp,ki,kd);
+g3=feedback(c3*sys,1);
+subplot(2,2,4);
+step(g3);
+title('pid controller');
 
 ## Output: <img width="1729" height="874" alt="Screenshot 2025-11-01 143138" src="https://github.com/user-attachments/assets/0bc6dd40-de2d-47d6-8e49-b52de5554fe4" />
 
